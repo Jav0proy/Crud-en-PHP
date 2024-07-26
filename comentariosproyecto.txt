@@ -1,0 +1,68 @@
+//
+paso.php
+leer archivo por linea
+
+Reportes // tabla gastos
+gs2MenuReportes.php
+consulta para traer datos de la tabla de gastos,
+muestra datos del empleado según las opciones del permiso se valida y se muestra pantalla, se manda el reporte correspondiente, a la hora de dar clic.
+
+gs2ReporteGastoAreaMotivo.php
+muestra reporte de gastos por área
+selecciona empresa 
+selecciona fecha
+se le dan opciones a escoger y mostrar el reporte.
+gerencia de sistemas valida finalizar el proceso 
+función para limpiar información
+función para mandar a imprimir
+
+muestra reporte del cliente
+
+los datos los trae de la tabla de gsCat_Usuario y de la tabla de gsCat_Permiso.
+mandan a llamar a las funciones en otro archivo,
+funciones.php y funcionestmp.php.
+
+2 archivos uno nombre normal y el segundo mismo nombre se le agrega Imp.
+muestra formulario,en el nomrmal y en el Imp 
+
+AdmonCatalogos.php
+administrador de catalogos,
+llevan la parte de un crud, query para mostrar los datos, y filas y columnas con los datos mostrados.
+
+ArqueoCaja.php
+
+
+Estructura 
+se conecta con la base y mas archivos que manejan
+ejemplo:
+<?php include('Connections/variables.php'); ?>
+<?php include ('funciones.php'); ?>
+<?php
+require_once('Connections/conexion.php');
+
+conexión
+carpetas por modulo.
+
+rutina.js
+si esta algo complejo el código.
+
+
+** Tablas a revisar en la base de datos en la base de Tesoreria, gsCat_Usuario y gsCat_Cliente 
+en estas 2 tablas aparecen la mayoría de los datos para consulta y para resolver o consultar las incidencias de los usuarios*.
+Checar el Curso de PHP compartido en Udemy.
+Seguir revisando los proyectos, entenderle, apuntar las cosas que no entiendo, preguntar o buscar su funcionalidad, revisar las estructura de las palabras reservadas.
+Revisar y tener un estándar para los qerys de la base de datos, que cambios se harían para mejorar o agilizar las consultas. **
+Checar nuevamente las estructuras de control, if elseif, for, foreach, funcionamiento , prueba y error. **
+Checar funcionamiento de arreglos **
+
+sentencia upper en el qery
+convierte la expresión o la entrada a mayúsculas.
+
+sentencia substr 
+substr(cadena;inicio;longitud)
+cadena=tipo: carácter lleva el campo, expresión o el valor literal de donde se extrae la subcadena
+inicio: tipo:numerico, posición de carácter inicial de la subcadena, las posiciones numéricas de los caracteres de la cadena comienzan en 1.
+longitud: tipo:numerico, el numero de caracteres en la subcadena, si la longitud es 0 la salida aparece en blanco.
+
+
+

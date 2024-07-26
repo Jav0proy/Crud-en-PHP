@@ -1,0 +1,35 @@
+Acceso a base de datos
+
+Nombre de la Conexión: 86_sistemasses
+Host: sabd.corprama.com.mx
+Puerto : 3306
+Nombre de Usuario : sistemasses
+Password : 2021.Pr0dS3rvs
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+* Liga para revisar solicitudes de otra área. *
+
+https://corpo-rama.softecsyt.com/HEAT/Account/Login?NoDefaultProvider=True
+
+usuario: javier.jimenez
+contraseña:  Jimenez2024$
+
+Solicitudes de incidencias, se clasifican en 4 apartados 
+
+*Incidentes de mi grupo sin atender*
+Columnas: Master, #Incidente, Empresa, Departamento, Nombre, Resumen, Categoría, Subcategoría, Estado, Grupo Resolutor.
+*Solicitudes de mi grupo sin atender*
+Columnas:#Solicitud, Empresa, Departamento, Nombre, Puesto , Resumen, Categoría, Subcategoría, Estado, Resolutor, Origen, Creado por, Grupo resolutor, Resuelto por, Comentario, Fecha de creación, Resuelto el, Cerrado el.
+*Mis incidentes*
+Columnas: Master, #Incidente, Empresa, Departamento, Nombre, Resumen, Categoría, Subcategoría, Estado , Grupo, Resolutor, Origen, Grupo resolutor, Atendido por.
+*Mis solicitudes*
+Columnas: #Solicitud, Empresa, Departamento, Nombre, Puesto, Resumen, Categoría, Subcategoría, Estado, Grupo, Resolutor, Origen, Creado por, Grupo resolutor, Resuelto por, Comentario, Fecha de creación, Resuelto el, Cerrado el.
+
+Con estas se trabajan las solicitudes.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+javier.jimenez@corprama.com.mx  correo empresa
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+

@@ -1,0 +1,60 @@
+Crear interface que haga, que muestre los siguientes datos
+de la base Auxiliares
+en las tablas de mt_Equipo_Transporte, buscar por placa
+en la tabla de mtCosumoGasolina buscar el consumo_no_ticket
+en la tabla de mtTarjeta buscar y actualizar tar_saldo_actual
+
+Datos a mostrar en la interface 
+Poner un buscador que busque por tarjeta o por placa
+datos a mostrar 
+num_placa.
+num_tarjeta.
+num_ticket.
+fecha.
+
+
+placa eqtrans_placa
+tarjeta 
+
+
+la operación tiene que hacerse en la tabla de 
+mtConsumoGasolina
+actualizar los campos de
+
+id_equipo_transporte
+consumo_saldo_anterior 
+consumo_importe
+consumo_saldo_actual
+consumo_hora_reg
+
+
+<th><?= $row['eqtrans_placa'] ?> </th>
+
+
+Entonces en el botón de editar habilitar todos los campos que se muestran
+y hacer el qery para actualizar los datos.
+
+
+
+select a.*,t.eqtrans_placa,m.tar_saldo_actual
+from mtConsumoGasolinaPrueba as a
+inner join mtEquipoTransportePrueba as t
+on a.id_equipo_transporte=t.id_equipo_transporte
+inner join mtTarjetaPrueba as m
+on t.id_equipo_transporte=m.id_equipo_transporte
+inner join mtTarjeta as m
+on a.id_equipo_transporte=m.id_equipo_transporte
+
+
+WHERE  t.eqtrans_placa like '9603L';
+
+select * from 
+
+WHERE  eqtrans_placa like '%$buscar%' 
+ORDER BY eqtrans_placa DESC;
+
+
+
+
+mysqli_fetch_array = retorna un array que corresponde a la fila obtenida, guarda información de índices asociativos utilizando los nombres de los campos del resultado como claves.
+

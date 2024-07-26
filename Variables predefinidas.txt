@@ -1,0 +1,5 @@
+Variables predefinidas
+$_SERVER: Contiene información como cabeceras,rutas y ubicaciones de script. 
+$_GET PARA CONSULTA. se envia de forma visible.
+$_POST se envia de forma no visible.
+$_SESSION es para una nueva sesión. 

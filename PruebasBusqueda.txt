@@ -1,0 +1,294 @@
+tabla mtConsumoGasolinaPrueba as a 
+id_consumo
+id_equipo_transporte
+id_cliente_cve
+id_tarjeta
+id_usuario_emp
+
+mtEquipotransportePrueba as t
+id_equipo_transporte
+id_tipo_transporte
+id_cliente_cve
+id_mar_eq_tra
+id_num_empleado
+id_engomado
+id_usuario_num_emp
+id_motbaja
+
+mtTarjetaPrueba as m 
+id_tarjeta
+id_equipo_transporte
+id_cliente_cve
+id_usuario_num_emp
+
+
+
+select a.id_consumo,t.eqtrans_placa,a.consumo_saldo_anterior,a.consumo_importe,a.consumo_saldo_actual,a.consumo_fecha_captura
+from mtConsumoGasolinaPrueba as a
+inner join mtEquipoTransportePrueba as t
+on a.id_equipo_transporte=t.id_equipo_transporte
+
+WHERE a.id_consumo='20';
+
+
+mtConsumogasolina a mtequipotransporte por el id_equipo_transporte
+mttarjetaprueba a 
+
+id_consumo = 141
+consumo ticket = 351
+Saldo Anterior = 0.00
+Consumo Importe = 100.00
+Placa = 6838U
+
+
+id_consumo = 1284
+consumo ticket = 57
+Saldo Anterior = 0.00
+Consumo Importe = 1.05
+Placa = 6840U
+
+
+
+844671
+
+**Crear otra pantalla para cuando se actualice correctamente, mostrar los datos actualizados que se modificaron.**
+
+
+Id Consumo
+Ticket
+Placa
+Saldo Anterior
+Consumo Importe
+Consumo Actual
+
+función para recorrer datos hacia atrás
+
+id_consumo
+
+arreglo para mandar los datos de consumo y al seleccionar que nos traiga todos los datos anteriores y mostrarlos,
+que solo nos deje modificar del que seleccionamos para abajo
+
+en editar información mostrar los datos en horizontal,
+todos los que esten después del que se selecciono.
+
+
+método que cuando le de clic, me mande 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+FORMULA DE EXCEL
+=C3-E2 CODIGO Recargo = 
+consumo_saldo_anterior,(ultimodefila)-consumo_saldo_actual(primerodefila).
+
+=H2-I2 CODIGO
+consumo_saldo_actual= consumo_saldo_anterior-consumo_importe.
+
+=J2+G3 CODIGO consumo_saldo_anterior =
+consumo_saldo_actual(primerodefila)+(recargo)resultado de(consumo_saldo_anterior,(ultimodefila)-consumo_saldo_actual(primerodefila)).
+
+
+UPDATE  mtConsumoGasolinaPrueba 
+SET consumo_importe='$consumo_importe',
+consumo_saldo_anterior='$consumo_anterior',
+consumo_saldo_actual='$consumo_saldo_actual'
+WHERE id_consumo='$id_consumo';
+
+update mtConsumoGasolinaPrueba
+set consumo_saldo_actual = $consumo_saldo_actual,
+consumo_saldo_anterior = $consumo_saldo_anterior.
+
+$consumoActualActualizado = 
+consumo_saldo_anterior-consumo_importe.
+
+$consumoAnteriorActualizado = consumo_saldo_actual(primerodefila)+(recargo)resultado de(consumo_saldo_anterior,(ultimodefila)-consumo_saldo_actual(primerodefila))
+
+$Recargo = consumo_saldo_anterior,(ultimodefila)-consumo_saldo_actual(primerodefila).
+
+$consumoImporteActualizado =
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+$variable1 = "hola";
+$variable2 = "mundo";
+$variable3 = "prueba";
+$variable4 = "esto";
+
+$arrayValores = array();
+
+$nombre = "variable";
+
+for($i = 1; $i <= 4; $i++) {
+    array_push($arrayValores, $nombre.$i);
+}
+print_r($arrayValores);
+
+
+<?php
+
+    $variable1 = "hola";
+    $variable2 = "mundo";
+    $variable3 = "prueba";
+    $variable4 = "esto";
+
+    $arrayValores = array();
+
+    $nombre = "variable";
+
+    for($i = 1; $i <= 4; $i++) {
+        array_push($arrayValores, ${$nombre.$i });
+    }
+    print_r($arrayValores);
+?>
+
+
+
+
+equipo transporte = 2313
+id_consumo = 349275
+
+
+aplicar evento onchange en el formulario
+<input type="submit" onclick="document.write('OK')">
+este es en el botón al darle clic y mandarlo
+
+<script>
+document.getElementById("fname").addEventListener("change", actualizarConsumo);
+funtion actualizarConsumo(){
+let x=documento.getElementById();
+x.value=x.value.toUpperCase();
+}
+</script>
+
+aplicar el evento onchange a las columnas de:
+Consumo saldo anterior y consumo importe
+
+el evento deberá de hacer los cálculos tal como en ele Excel
+checar los cálculos ala momento de actualizar.
+
+
+id_consumo = 371364,371708,372072
+id_equipo_transporte = 2330
+
+
+PRUEBAS
+idconsumo = 371708
+id_equipo_transporte = 2073 
+consumo importe = 198.67 
+
+**********************************************************************************************
+Se accede a los métodos get y post por el name que se le pone en la etiqueta de input o la que estemos trabajando.
+ejemplo 
+name="nombre", con este nombre accedemos
+
+$nombre=$_GET['nombre'];dentro del corchete va el nombre tal cual esta en la base de datos.
+
+También es importante saber y poner en un formulario los datos que se van a mandar y que se van a utilizar, poner también en la accion a donde se va a mandar los datos, en que archivo.
+ejemplo
+<form action="editar.php" method="POST"> 
+</form>
+
+***********************************************************************************************
+
+<!--HTML-->
+<input type="button" value="Mostrar URL" onclick="mostrar()">
+pasar el evento a utilizar dentro del input en el HTML, en este caso seria la función de mostrar
+donde vendrá el evento.
+
+<!--JS-->
+<script>
+        function mostrar () {
+            let url = window.location.href;
+            window.alert(url);
+        }
+este seria el evento para actualizar la pagina,dejarnos en la misma pagina.
+</script>
+
+<input type="button" value="Recargar" onclick="location.reload()">
+para recargar, actualizar mediante un botón la pagina, con el evento onclick.
+checar y manejar para posible uso posterior.
+
+
+getElementById()= 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+consumosaldoactual0 = consumosaldoanterior0-consumoimporte0
+
+consumosaldoanterior1 = consumosaldoactual0+recargo1
+
+consumosaldoactual1 = consumosaldoanterior1 - consumoimporte1
+
+consumosaldoanterior2 = consumosaldoactual1+ recargo2
+
+consumosaldoactual2=consumosaldoanterior2-consumoimporte2
+
+recargo1=consumosaldoanterior1-consumosaldoactual0
+recargo2 = consumosaldoanterior2-consumosaldoactual1
+
+update para la base de datos 
+
+update 0
+update 1
+update 2
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+meterlo en un arreglo de arreglos los datos que sean solamente mayores al consultado.
+
+poner todas las pantallas en un sola y controlarlo con banderas, con el id con if, y eventos onclick para mostrar.
+
+con el evento onclick que aparezca y desaparesca la información
+que al momento de darle en algo lo muestre pero en la misma pantalla y siga haciendo sus funcionalidades.
+
+
+
+como poder recorrer todos los datos que me manden que sean mayores al que seleccione
+y esos guardarlos en un arreglo o varios arreglos dependiendo que tantos datos lleguen.
+
+
+nuevoImporteActualizado: 0.27 nuevoImporteActualizado: 493.81
+
+
+nuevoRecargo:checar
+nuevoImporteAnterior:checar
+
+consumosaldoanterior=
+consumosaldoactual+recargo
+
+falta poner el recargo bien
+mostrar y checar nuevamente los cálculos.
+
+hacer otro qery para el nuevo arreglo
+recorrerlo y mostrarlo,
+checar que valores manda y hacer los cálculos en el nuevo qery y guardarlos en las nuevas variables.
+
+
+métodos o elementos en JS
+
+// Obtiene un elemento por id
+document.getElementById('someid');
+
+// Obtinee una lista con los elementos que tienen esa clase
+document.getElementsByClassName('someclass');
+
+// Obtiene una HTMLCollection con los todos los elementos 'li'
+document.getElementsByTagName('LI');
+
+// Devuelve el primer elemento del documento que cumpla la selección (la notación es como en CSS)
+document.querySelector('.someclass');
+
+// Devuelve una lista de elementos que cumplen con la selección (notación como en CSS)
+document.querySelectorAll('div.note, div.alert');
+
+Para crear nuevos elementos.
+
+innerHTML
+obtiene o establece el marcado HTML o XML contenido dentro del elemento.
+
+
+
+
+
+
+Salida los viernes a las 5:40
+
